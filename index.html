@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--Puedo Code-->
+<!--Create display area (div) for questions
+	Create questions to be displayed
+	Create radio buttons to choose options
+	Create Counter to add up right or wrong questions
+	Create timer for countdown
+	Create buttions to control the flow of the game.-->
+<html>
+	<head>
+		<title>Trivia</title>
+		<link type='text/css' rel='stylesheet' href='Triva.css'/>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans"/>
+	</head>
+	<body>
+		<center>
+		<img src ="https://i.pinimg.com/originals/33/f0/f8/33f0f8d4c9fc568b63445432aa91cf5e.jpg ";></center>
+
+<!--Trivia Box for Game questions-->
+		<div id='container'>
+			<div id='title'>
+				<h1>MJ Trivia</h1>
+					<h2 id="progress"></h2>
+			</div>
+   			<br/>
+   			<br/>
+  			<div id='quiz'></div>
+    		<div class='button' id='continue'><a href='#'>Continue</a></div>
+    		<div class='button' id='previous'><a href='#'>Previous</a></div>
+    		<div class='button' id='begin'> <a href='#'>Reset</a></div>
+    		
+    	</div>
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<script type="text/javascript" src='questions.json'></script>
+		<script type='text/javascript' src='Triva.js'></script>
+	</body>
+</html>
