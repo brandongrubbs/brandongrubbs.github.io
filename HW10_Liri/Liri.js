@@ -45,7 +45,18 @@ spotify.search({ type: 'track', query: 'songName' }, function(err,
      return;
   }
  
-console.log(data.tracks.items [0]); 
+var songs = (data.tracks.items);
+for (i=0; i < songs.length; i++){
+	console.log[i];
+	console.log('artist(s):' + songs[i].artists.map(
+			artistName));
+	console.log('song name: ' + songs[i].name);
+	console.log('preview song: '+ songs[i}.preview_url);
+	console.log('album:' + songs [i].album.name);
+	console.log('------------------------------------------');
+	)
+}
+
 });
 
 var twchange = function(newCommand, altCommand){
