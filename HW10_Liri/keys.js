@@ -7,7 +7,7 @@ exports.twitterApiKeys = {
   access_token_secret: "gQt2sGpJGIFkCMzTOEaHmHWgswlhPEWt3SDPLxlrHJdq4"
 };
 
-//exports.spotify = {
-  //id: "11457a4ae7014110bb034fa0d0b0de6b",
-  //secret: "a469770f55b84b00bd7dbda6f5b58427"
-//};
+exports.spotifyApiKeys = {
+  id: "11457a4ae7014110bb034fa0d0b0de6b",
+  secret: "a469770f55b84b00bd7dbda6f5b58427"
+};

@@ -4,6 +4,8 @@ var Twitter = require('twitter');
 
 var Spotify = require('node-spotify-api');
 
+var request = require('request');
+
 var pullTweets = function(){
 
  
@@ -26,37 +28,29 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
 
 }
 
-var artistName = function(artist){
-	return artist.name;
-}
+//var getMeSpotify = function(songName){
+//}
+ 
+//var spotify = new Spotify(keys.spotifyApiKeys);
+  //id: "11457a4ae7014110bb034fa0d0b0de6b",
+  //secret: "a469770f55b84b00bd7dbda6f5b58427"
 
-var musicSearch = function(songName){
-}
  
-var spotify = new Spotify({
-  id: "11457a4ae7014110bb034fa0d0b0de6b",
-  secret: "a469770f55b84b00bd7dbda6f5b58427"
-});
+//spotify.search({ type: 'track', query: 'All the small things' }, function(err,
+//	 data) {
+//  if (err) {
+//     console.log('Error occurred: ' + err);
+//     return;
+//  }
  
-spotify.search({ type: 'track', query: 'songName' }, function(err,
-	 data) {
-  if (err) {
-     console.log('Error occurred: ' + err);
-     return;
-  }
- 
-var songs = (data.tracks.items);
-for (i=0; i < songs.length; i++){
-	console.log[i];
-	console.log('artist(s):' + songs[i].artists.map(
-			artistName));
-	console.log('song name: ' + songs[i].name);
-	console.log('preview song: '+ songs[i}.preview_url);
-	console.log('album:' + songs [i].album.name);
-	console.log('------------------------------------------');
-	)
-}
+//console.log(data.tracks.items [3]); 
+//});
 
+
+request('http://www.omdbapi.com/?apikey=a5e0a2a7&', function (error, response, body) {
+  console.log('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
 });
 
 var twchange = function(newCommand, altCommand){
@@ -65,7 +59,7 @@ var twchange = function(newCommand, altCommand){
 			pullTweets();
 			break;
 		case 'spotify-this-song' :
-			musicSearch(altCommand);
+			getMeSpotify(altCommand);
 			break;
 		default:
 		console.log('Liri does not understand');
